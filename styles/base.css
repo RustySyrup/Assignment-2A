@@ -575,15 +575,22 @@ section.problem {
 .galleryWrap {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5em;
+  grid-auto-flow: row dense;
 }
 
 .galleryWrap img[src$="_w.jpg"] {
+  grid-column-end: span 2;
 }
 
 .galleryWrap img[src$="_p.jpg"] {
+  grid-row-end: span 2;
 }
 
 .galleryWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ######### 9. Footer ######### */
@@ -1021,6 +1028,9 @@ form#contactForm {
 
   /* ######### 10a-viii. Footer, Large screen rules ######### */
   footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.25fr;
   }
 
   .contact {
@@ -1034,6 +1044,9 @@ form#contactForm {
 
   .social article {
     height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    align-items: center;
   }
 
   .socialIcons {
@@ -1050,6 +1063,7 @@ form#contactForm {
     background-color: #b6e8ff;
     color: #233156;
     padding: 1rem 0 0;
+    grid-column: 1/-1;
   }
 }
 /* ############ 10b. Media Query, (min-width: 1000px) ############ */
