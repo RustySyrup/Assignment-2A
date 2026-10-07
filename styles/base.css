@@ -768,6 +768,7 @@ input[type="radio"]:checked ~ span:before {
 /*  ########### NEW CODE START (05_03) ########### */
 form#contactForm {
   max-width: initial;
+  grid-area: f;
 }
 
 .contactForm div {
@@ -1079,7 +1080,7 @@ form#contactForm {
   .form {
     display: grid;
     grid-template-columns: auto minmax(min-content, 580px);
-    grid-template-areas: ". h " ". p";
+    grid-template-areas: ". h " ". p" ". f";
   }
 
   .form h3 {
