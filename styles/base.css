@@ -107,14 +107,22 @@ i {
   color: #fff;
   font-size: 20px;
   text-align: center;
+  display: grid;
+  grid-template-columns: 10px 2fr 10px;
+  grid-template-rows: 0.5fr 1fr 20px;
+  gap: 20px;
 }
 
 .hero img {
   margin: auto;
   padding-top: 1rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 .hero article {
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 .hero h1 {
@@ -403,7 +411,9 @@ nav .btn:hover {
 .teamMembers img {
   border-radius: 50%;
   width: 80%;
-  box-shadow: 1px 1px 3px #fff, 2px 2px 6px rgb(28 121 138 / 50%);
+  box-shadow:
+    1px 1px 3px #fff,
+    2px 2px 6px rgb(28 121 138 / 50%);
   border: solid 2px rgba(255, 255, 255, 0.8);
 }
 
@@ -605,7 +615,8 @@ form#contactForm {
 }
 
 .contactForm input[type="submit"]:active {
-  box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.6),
+  box-shadow:
+    1px 1px 6px rgba(255, 255, 255, 0.6),
     0px 0px 4px rgba(255, 255, 255, 0.8);
 }
 
@@ -650,7 +661,10 @@ input[type="checkbox"]:checked ~ span:before {
 .contactForm input:focus,
 .contactForm textarea:focus {
   border: solid 1px #13b1e7;
-  box-shadow: 0 0 2px #0d92bf, 0px 0px 4px #0d92bf, 1px 1px 4px #13b1e7,
+  box-shadow:
+    0 0 2px #0d92bf,
+    0px 0px 4px #0d92bf,
+    1px 1px 4px #13b1e7,
     2px 2px 4px #13b1e7;
   outline: none;
 }
@@ -793,6 +807,9 @@ form#contactForm {
     background: url(../images/header1_lg.jpg) no-repeat center left;
     background-size: cover;
     text-align: left;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.25fr 1fr 0.25fr;
+    align-items: center;
   }
 
   .hero img {
